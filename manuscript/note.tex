@@ -1,0 +1,345 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\ECN}{E_{\mathrm{CN}}}
+\newcommand{\CN}{\mathrm{CN}}
+\title{Proofs of Nath--Fasfous--Das--Shang's commuting and surface conjectures, and a sharp form of Tak--Dutta--Nath's clique theorem}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{17 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For Nath--Fasfous--Das--Shang's Conjectures~1--3
+(\emph{Symmetry} \textbf{13} (2021), 1651, Section~4, p.~11), we prove
+the surface and commuting-graph statements and give an alternative proof
+with exact equality cases for Tak--Dutta--Nath's prior clique result
+(arXiv:2605.22160v1 (2026), Theorem~5.4, pp.~14--15).
+Every planar or toroidal graph is non-CN-hyperenergetic.
+For every finite nonabelian group, its noncentral commuting graph satisfies
+$\ECN\le n(n-z-2)<2(n-1)(n-2)$, where $n$ counts noncentral elements
+and $z$ counts central elements; the same bound holds for every finite
+noncommutative ring, without an identity assumption.
+The group argument combines the published estimate $\ECN\le4m$ with a
+proper-centralizer count. A neighborhood-clique decomposition proves the
+surface statement. For a union of cliques, equality with the complete-graph
+benchmark occurs exactly for one clique or two isolated vertices.
+\end{abstract}
+
+\section{The question and the spectral bounds}
+Nath, Fasfous, Das and Shang~\cite{NFDS} conjectured that planar or
+toroidal graphs, noncentral commuting graphs of finite nonabelian groups,
+and disjoint unions of cliques are not CN-hyperenergetic.
+We prove the first two assertions and extend the group bound to all finite
+noncommutative rings. The clique assertion has a prior proof by Tak, Dutta
+and Nath~\cite[Theorem~5.4]{TDN}; Section~\ref{sec:cliques} gives another
+proof and identifies the exceptions to the strict inequality displayed there.
+Jannat, Nath and Das~\cite[Remark~4.7, equation~(6), p.~15]{JND} supply
+the general estimate $\ECN(H)\le4|E(H)|$ used for the group result.
+
+For a finite simple graph $H$, let $A$ be its adjacency matrix, $D$ its
+diagonal degree matrix, and $N_H(v)$ the neighbors of $v$. Following
+Alwardi, Soner and Gutman~\cite[Definitions~1.5--1.7]{ASG}, put
+\[
+ \CN(H)_{uv}=\begin{cases}|N_H(u)\cap N_H(v)|,&u\ne v,\\0,&u=v,\end{cases}
+ \qquad \ECN(H)=\sum_i|\lambda_i(\CN(H))|.
+\]
+All eigenvalues are counted with multiplicity. Counting two-step walks gives
+$\CN(H)=A^2-D$~\cite[Proposition~2.7]{ASG}.
+For $n\ge2$, $\CN(K_n)=(n-2)(J_n-I_n)$, where $J_n$ is the all-ones
+matrix and $I_n$ is the identity. Thus the comparison value is
+\[
+ B(n)=\ECN(K_n)=2(n-1)(n-2) \quad(n\ge1).
+\]
+The value at $n=1$ is zero. A graph of positive order $n$ is
+CN-hyperenergetic when $\ECN(H)>B(n)$.
+
+\begin{lemma}\label{lem:bounds}
+If $H$ has $m$ edges and $r$ vertices of positive degree, then
+\[
+ \ECN(H)\le4m,\qquad
+ \ECN(H)\le2\sum_v\max\{d_H(v)-1,0\}=4m-2r.
+\]
+\end{lemma}
+\begin{proof}
+For the first inequality, set $P=A^2$ and $Q=D$, both positive
+semidefinite. In an orthonormal eigenbasis $u_i$ of $P-Q$, put
+$p_i=u_i^{\mathsf T}Pu_i\ge0$ and $q_i=u_i^{\mathsf T}Qu_i\ge0$.
+Then
+\[
+ \sum_i|\lambda_i(P-Q)|=\sum_i|p_i-q_i|
+ \le\sum_i(p_i+q_i)=\operatorname{tr}P+\operatorname{tr}Q=4m.
+\]
+For the second inequality, let $B_v$ have an entry~1 at distinct
+vertices of $N_H(v)$ and zero elsewhere. Entrywise counting gives
+$\CN(H)=\sum_v B_v$. If $d=d_H(v)\ge1$, the nonzero block of $B_v$
+is $J_d-I_d$, whose eigenvalues are $d-1$ and $-1$ with multiplicity
+$d-1$. Its trace norm, the sum of its singular values, is $2(d-1)$;
+for $d=0$ it is zero. The trace norm of a real symmetric matrix equals
+the sum of its absolute eigenvalues. Its triangle inequality
+\cite[Lemma~4.2]{JND} now gives
+the result, since $\sum_v d_H(v)=2m$.
+\end{proof}
+
+\section{All finite nonabelian groups and noncommutative rings}
+For a group $G$, write $Z(G)$ for its center and $C_G(x)$ for the
+centralizer of $x$. The graph $\Gamma_c(G)$ has the individual elements
+of $G\setminus Z(G)$ as vertices; distinct $x,y$ are adjacent when
+$xy=yx$. Define $\Gamma_c(R)$ in the same way for a ring $R$.
+Rings here are associative, with an abelian additive group; a
+multiplicative identity is not required.
+
+\begin{theorem}\label{thm:groups}
+Let $G$ be a finite nonabelian group, $z=|Z(G)|$, and
+$n=|G\setminus Z(G)|$. Then $z\ge1$, $n\ge z+2\ge3$, and
+\begin{equation}\label{eq:main}
+ \ECN(\Gamma_c(G))\le n(n-z-2)<B(n).
+\end{equation}
+In particular, Conjecture~2 of~\cite[Section~4, p.~11]{NFDS} holds.
+\end{theorem}
+\begin{proof}
+Put $N=|G|=n+z$. For noncentral $x$, the subgroup $C_G(x)$ is proper,
+so its index is at least two and $|C_G(x)|\le N/2$. The disjoint union
+\[
+ C_G(x)=Z(G)\,\dot\cup\,\{x\}\,\dot\cup\,N_{\Gamma_c(G)}(x)
+\]
+therefore gives
+\begin{equation}\label{eq:degree}
+ d(x)=|C_G(x)|-z-1,\qquad 2d(x)\le n-z-2.
+\end{equation}
+There is a noncentral element, and its degree is nonnegative; hence
+$n\ge z+2$. Also $z\ge1$ because the identity is central.
+By Lemma~\ref{lem:bounds},
+$\ECN(\Gamma_c(G))\le2\sum_xd(x)\le n(n-z-2)$.
+Finally,
+\[
+ B(n)-n(n-z-2)=(n-2)^2+nz>0.
+\]
+\end{proof}
+
+\begin{corollary}\label{cor:rings}
+If $R$ is any finite noncommutative ring, $z=|Z(R)|$, and
+$n=|R\setminus Z(R)|$, then $n\ge z+2\ge3$ and
+\[
+ \ECN(\Gamma_c(R))\le n(n-z-2)<B(n).
+\]
+\end{corollary}
+\begin{proof}
+The additive centralizer $C_R(x)=\{y\in R:xy=yx\}$ is a proper
+additive subgroup for noncentral $x$. Closure follows from
+$x(y-w)=xy-xw=(y-w)x$. Its order is at most $|R|/2$.
+The disjoint decomposition into $Z(R)$, $\{x\}$ and the neighbors of
+$x$ is unchanged, and $0\in Z(R)$. The proof of
+Theorem~\ref{thm:groups} applies word for word.
+\end{proof}
+Fasfous and Nath~\cite[Conjecture~3.12, p.~75]{FN} posed the
+non-hyperenergetic conclusion for finite rings whose noncentral
+centralizers are commutative (CC-rings). Tak, Dutta and
+Nath~\cite[Corollary~5.5, p.~15]{TDN} proved that case.
+Corollary~\ref{cor:rings} removes the CC assumption; the extension to
+all finite noncommutative rings is not posed in either statement.
+
+\begin{corollary}\label{cor:prime}
+For either $S=G$ or $S=R$ as above, let $p$ be the least prime divisor
+of $|S|$. Then
+\[
+ \ECN(\Gamma_c(S))\le
+ 2\sum_{x\notin Z(S)}\max\{|C_S(x)|-z-2,0\},\qquad
+ \ECN(\Gamma_c(S))\le2n\left(\frac{n+z}{p}-z-1\right).
+\]
+\end{corollary}
+\begin{proof}
+The first bound is the second inequality of Lemma~\ref{lem:bounds}
+and the degree identity~\eqref{eq:degree}.
+The index of each proper centralizer subgroup divides $|S|$, so it
+is at least $p$. Replace $|S|/2$ by $|S|/p$ in the degree argument.
+\end{proof}
+
+\section{Planar and toroidal graphs}
+We first dispose of the small orders without enumerating all graphs.
+
+\begin{lemma}\label{lem:small}
+Every simple graph on at most seven vertices and of positive order is
+non-CN-hyperenergetic.
+\end{lemma}
+\begin{proof}
+Isolated vertices do not affect the energy, and $B(n)$ is nondecreasing
+for positive integers. It therefore suffices to consider graphs with no
+isolated vertices; the cases of at most two vertices have energy zero.
+For orders $n=3,4,5,6,7$, respectively, Lemma~\ref{lem:bounds} gives
+$\ECN\le4m-2n\le B(n)$ whenever
+\[
+ m\le2,\ 5,\ 8,\ 13,\ 18,
+\]
+respectively. The remaining graphs, up to isomorphism, are $K_n$
+($3\le n\le7$), $K_n-e$ ($5\le n\le7$), and $K_7$ with two edges
+removed, either disjoint or incident at a common endpoint.
+
+Each remaining common-neighborhood matrix has exactly one positive
+eigenvalue. Here are the details. For $K_n$ this follows from
+$\CN(K_n)=(n-2)(J_n-I_n)$. For the other graphs partition the vertices
+as indicated below. The subspace constant on each part is invariant;
+the matrix acting on these constants is the quotient matrix $Q$.
+The remaining eigenvalues and the quotients are
+\[
+\begin{array}{c|c|c}
+\text{removed edges; part sizes}&Q&\text{remaining eigenvalues}\\ \hline
+e;\ 2,n-2 &
+\begin{pmatrix}n-2&(n-2)(n-3)\\2(n-3)&(n-2)(n-3)\end{pmatrix}
+&[-(n-2)]^{n-2}\\[8pt]
+2K_2;\ 4,3&\begin{pmatrix}11&12\\16&10\end{pmatrix}&[-5]^4,[-1]^1\\[8pt]
+K_{1,2};\ 1,2,4&\begin{pmatrix}0&8&12\\4&4&16\\3&8&15\end{pmatrix}
+&[-4]^1,[-5]^3
+\end{array}
+\]
+For $K_n-e$, the first part consists of the missing edge's endpoints;
+for $2K_2$ it contains all four endpoints; for $K_{1,2}$ the parts are
+the common endpoint, the two other endpoints, and the four remaining
+vertices. Within a part, zero-sum vectors give the displayed eigenvalues;
+in the $2K_2$ case, the contrast of the two endpoint-pair sums gives $-1$.
+These vectors and the constant-on-part subspace span the whole space.
+The first two quotients have negative determinants
+$(n-2)(n-3)(4-n)$ and $-82$. Their eigenvalues therefore have opposite
+signs. The last quotient has characteristic polynomial
+\[
+ t^3-19t^2-136t-144.
+\]
+Its roots are real because a quotient of a symmetric matrix for such a
+partition is similar to a symmetric matrix. Their product is $144>0$,
+and their pairwise-product sum is $-136<0$, so exactly two are negative.
+Thus there is exactly one positive eigenvalue in every case.
+
+For any zero-trace symmetric matrix with one positive eigenvalue $\rho$,
+its energy is $2\rho$. Each row sum of $\CN(H)$ is at most
+$(n-1)(n-2)$. The spectral radius satisfies the same bound, so
+$2\rho\le B(n)$, as required.
+\end{proof}
+
+\begin{theorem}\label{thm:surfaces}
+If $H$ is a finite simple planar or toroidal graph of positive order $n$,
+then $\ECN(H)\le B(n)$. Thus Conjecture~1 of
+\cite[Section~4, p.~11]{NFDS} holds.
+\end{theorem}
+\begin{proof}
+Delete isolated vertices, leaving $r$ vertices and $m$ edges. If $r\le7$,
+apply Lemma~\ref{lem:small}; the empty remainder has energy zero.
+If $r\ge8$, Euler's edge bound for a simple graph embeddable in the
+torus gives $m\le3r$; this also holds for planar graphs. To see this,
+connect components by additional edges and choose a minimum-genus
+cellular embedding, of genus $g\le1$. If the augmented graph has $m'$
+edges and $f$ faces, then $r-m'+f=2-2g$ and $3f\le2m'$, so
+$m\le m'\le3r-6+6g\le3r$.
+By Lemma~\ref{lem:bounds}, $\ECN\le4m-2r\le10r$, while
+\[
+ B(r)-10r=2(r-4)^2-28\ge4>0.
+\]
+Adding back isolated vertices can only increase the benchmark.
+\end{proof}
+
+\section{The clique theorem and its equality cases}\label{sec:cliques}
+The non-strict conclusion of the following proposition is Conjecture~3
+of~\cite[Section~4, p.~11]{NFDS}, proved by Tak, Dutta and
+Nath~\cite[Theorem~5.4, pp.~14--15]{TDN}.
+
+\begin{proposition}\label{prop:cliques}
+If $H=K_{s_1}\sqcup\cdots\sqcup K_{s_k}$, with $k\ge1$, $s_i\ge1$
+and $n=\sum_i s_i$, then
+\[
+ \ECN(H)=2\sum_i(s_i-1)(s_i-2)\le B(n).
+\]
+Equality holds exactly for $k=1$, or $k=2$ and $s_1=s_2=1$.
+\end{proposition}
+\begin{proof}
+The matrix is block diagonal across components, so the energies add.
+Put $f(s)=2(s-1)(s-2)$ for $s\ge1$. For positive integers $a,b$,
+\[
+ f(a+b)-f(a)-f(b)=4(ab-1)\ge0,
+\]
+with equality exactly when $a=b=1$. Merge components successively.
+If $k\ge3$, a second merger involving the first merged part is strict,
+since that part has at least two vertices. This gives both directions
+of the equality characterization.
+\end{proof}
+The unrestricted strict inequality displayed in~\cite[Theorem~5.4]{TDN}
+therefore needs these exceptions: a single clique, for example $K_3$,
+and $2K_1$ give equality. The source conjecture itself asks only for
+non-hyperenergeticity and is true as stated.
+
+\section{Coverage and mathematical evidence}
+\begin{center}\small
+\begin{tabular}{@{}p{0.30\textwidth}p{0.64\textwidth}@{}}
+\toprule Source item & Coverage\\\midrule
+\cite{NFDS}, Conjecture 1 & Proved: Theorem~\ref{thm:surfaces}.\\[3pt]
+\cite{NFDS}, Conjecture 2 & Proved: Theorem~\ref{thm:groups}, with a center-dependent bound.\\[3pt]
+\cite{NFDS}, Conjecture 3 & Reproved; prior proof Tak--Dutta--Nath (2026).
+Proposition~\ref{prop:cliques} gives all equality cases.\\[3pt]
+\cite{TDN}, Theorem 5.4, strict form & Refuted-and-corrected by
+Proposition~\ref{prop:cliques}; equality for $K_3$ and $2K_1$.\\[3pt]
+\cite{FN}, Conjecture 3.12 & Reproved; prior proof Tak--Dutta--Nath (2026),
+Corollary 5.5. Corollary~\ref{cor:rings} extends it to all finite
+noncommutative rings (an extension not posed in that source).\\[3pt]
+\cite{NFDS}, Theorems 7--17 and Corollaries 4--6 & Their non-hyperenergetic
+conclusions follow from Theorem~\ref{thm:groups}; exact energy formulas
+are not rederived.\\[3pt]
+\cite{ASG}, Open problems 1--2 & Not covered in general: existence of
+CN-hyperenergetic graphs and effects of edge deletion. Lemma~\ref{lem:small}
+excludes the former through order seven.\\[3pt]
+\cite{TDN}, Problems 5.1--5.2 & Not covered: integrality and hyperenergeticity
+for the distinct minimum-second-neighborhood matrix.\\
+\bottomrule\end{tabular}\end{center}
+
+\paragraph{Formal statements and written proofs.}
+The declaration \texttt{NoncentralBound.result} in
+\href{https://github.com/the-omega-institute/trureturing/blob/b3bd002bc644799939f299fe6c6c26195e3bb998/D5/S3/Combinatorics/Graph/CommonNeighborhood/NoncentralBound.lean}{\texttt{NoncentralBound.lean}}
+states $\ECN(\Gamma_c(G))\le B(n)$ for every finite nonabelian group.
+Its helpers \texttt{cn\_energy\_le\_twice\_degree\_sum} and
+\texttt{twice\_degree\_bound} express the spectral and centralizer estimates;
+the center-dependent estimate occurs in the proof of \texttt{result}.
+The companion file
+\href{https://github.com/the-omega-institute/trureturing/blob/b3bd002bc644799939f299fe6c6c26195e3bb998/D5/S3/Combinatorics/Graph/SubgroupGenerating/CyclicExtensionRefutation.lean}{\texttt{CyclicExtensionRefutation.lean}}
+defines \texttt{commonNeighbourMatrix} with a zero diagonal,
+\texttt{graphSpectrum} with the full eigenvalue multiset, and
+\texttt{graphEnergy} with zero centering for CN-energy.
+The strict group comparison, ring and prime-divisor bounds,
+surface theorem, and clique equality cases have the written proofs above;
+they are distinct from the stated scope of \texttt{result}.
+
+\paragraph{Exact finite checks.}
+The accompanying standard-library programs check the matrix identity,
+clique equality cases, finite group and ring centralizers, and the quotient
+matrices in Lemma~\ref{lem:small} using integers and rational numbers.
+The quotient characteristic polynomials and invariant subspaces are checked
+directly. The universal conclusions follow from the written proofs.
+The supporting JSON files specify the finite ranges and exact outputs.
+
+\begin{thebibliography}{9}
+\bibitem{NFDS} R.~K.~Nath, W.~N.~T.~Fasfous, K.~C.~Das and Y.~Shang,
+Common Neighborhood Energy of Commuting Graphs of Finite Groups,
+\emph{Symmetry} \textbf{13} (2021), 1651.
+\href{https://doi.org/10.3390/sym13091651}{doi:10.3390/sym13091651}.
+\bibitem{JND} Firdous Ee Jannat, R.~K.~Nath and K.~C.~Das,
+Common neighborhood energies and their relations with Zagreb index,
+\href{https://arxiv.org/abs/2402.15416v1}{arXiv:2402.15416v1} (2024).
+\bibitem{ASG} A.~Alwardi, N.~D.~Soner and I.~Gutman,
+On the common-neighborhood energy of a graph,
+\emph{Bull. Acad. Serbe Sci. Arts, Sci. Math.} \textbf{36} (2011), 49--59.
+\href{https://www.maths.tcd.ie/EMIS/journals/BSANU/36/r4.pdf}{Full text}.
+\bibitem{TDN} P.~Tak, J.~Dutta and R.~K.~Nath,
+Minimum second neighborhood degree energy of commuting graphs of finite rings,
+\href{https://arxiv.org/abs/2605.22160v1}{arXiv:2605.22160v1} (2026).
+\bibitem{FN} W.~N.~T.~Fasfous and R.~K.~Nath,
+Common neighborhood spectrum and energy of commuting graphs of finite rings,
+\emph{Palestine J. Math.} \textbf{13}(1) (2024), 66--76.
+\href{https://pjm.ppu.edu/sites/default/files/papers/PJM_13\%281\%29_2024_66_to_76.pdf}{Full text}.
+\end{thebibliography}
+\medskip
+\noindent\small This work is licensed under the Creative Commons Attribution 4.0
+International license (CC BY 4.0).
+\end{document}

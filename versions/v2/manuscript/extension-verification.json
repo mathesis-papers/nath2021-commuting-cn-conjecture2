@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "arithmetic": "exact integers and rationals",
+  "neighborhood_clique_decomposition": {
+    "vertex_range": [
+      0,
+      6
+    ],
+    "labelled_graphs": 33868,
+    "scope": "Entrywise neighborhood-clique decomposition and degree identity, not an exhaustive spectral proof."
+  },
+  "small_order_and_surface_checks": {
+    "sparse_edge_thresholds": {
+      "3": 2,
+      "4": 5,
+      "5": 8,
+      "6": 13,
+      "7": 18
+    },
+    "complete_graph_orders": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "noncomplete_dense_cases": [
+      {
+        "order": 5,
+        "removed_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "part_sizes": [
+          2,
+          3
+        ],
+        "quotient": [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "quotient_charpoly_descending": [
+          1,
+          -9,
+          -6
+        ],
+        "remaining_eigenvalues_with_multiplicity": [
+          -3,
+          -3,
+          -3
+        ],
+        "full_charpoly_descending": [
+          1,
+          0,
+          -60,
+          -270,
+          -405,
+          -162
+        ],
+        "positive_eigenvalues": 1
+      },
+      {
+        "order": 6,
+        "removed_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "part_sizes": [
+          2,
+          4
+        ],
+        "quotient": [
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            12
+          ]
+        ],
+        "quotient_charpoly_descending": [
+          1,
+          -16,
+          -24
+        ],
+        "remaining_eigenvalues_with_multiplicity": [
+          -4,
+          -4,
+          -4,
+          -4
+        ],
+        "full_charpoly_descending": [
+          1,
+          0,
+          -184,
+          -1664,
+          -6144,
+          -10240,
+          -6144
+        ],
+        "positive_eigenvalues": 1
+      },
+      {
+        "order": 7,
+        "removed_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "part_sizes": [
+          2,
+          5
+        ],
+        "quotient": [
+          [
+            5,
+            20
+          ],
+          [
+            8,
+            20
+          ]
+        ],
+        "quotient_charpoly_descending": [
+          1,
+          -25,
+          -60
+        ],
+        "remaining_eigenvalues_with_multiplicity": [
+          -5,
+          -5,
+          -5,
+          -5,
+          -5
+        ],
+        "full_charpoly_descending": [
+          1,
+          0,
+          -435,
+          -6500,
+          -43125,
+          -150000,
+          -265625,
+          -187500
+        ],
+        "positive_eigenvalues": 1
+      },
+      {
+        "order": 7,
+        "removed_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "part_sizes": [
+          4,
+          3
+        ],
+        "quotient": [
+          [
+            11,
+            12
+          ],
+          [
+            16,
+            10
+          ]
+        ],
+        "quotient_charpoly_descending": [
+          1,
+          -21,
+          -82
+        ],
+        "remaining_eigenvalues_with_multiplicity": [
+          -5,
+          -5,
+          -5,
+          -5,
+          -1
+        ],
+        "full_charpoly_descending": [
+          1,
+          0,
+          -353,
+          -4642,
+          -26465,
+          -76300,
+          -105375,
+          -51250
+        ],
+        "positive_eigenvalues": 1
+      },
+      {
+        "order": 7,
+        "removed_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "part_sizes": [
+          1,
+          2,
+          4
+        ],
+        "quotient": [
+          [
+            0,
+            8,
+            12
+          ],
+          [
+            4,
+            4,
+            16
+          ],
+          [
+            3,
+            8,
+            15
+          ]
+        ],
+        "quotient_charpoly_descending": [
+          1,
+          -19,
+          -136,
+          -144
+        ],
+        "remaining_eigenvalues_with_multiplicity": [
+          -4,
+          -5,
+          -5,
+          -5
+        ],
+        "full_charpoly_descending": [
+          1,
+          0,
+          -362,
+          -4868,
+          -28671,
+          -86740,
+          -129200,
+          -72000
+        ],
+        "positive_eigenvalues": 1
+      }
+    ],
+    "surface_polynomial_identity_integer_range": [
+      8,
+      10000
+    ],
+    "scope": "Exact quotient matrices and characteristic polynomials support the small-order written proof; the all-order surface argument uses Euler and the written polynomial comparison."
+  },
+  "finite_ring_models": [
+    {
+      "name": "F2 row ring, matrices (a,b;0,0)",
+      "order": 4,
+      "has_multiplicative_identity": false,
+      "center_order": 1,
+      "noncentral_vertices": 3,
+      "centralizer_orders": [
+        2,
+        2,
+        2
+      ],
+      "degrees": [
+        0,
+        0,
+        0
+      ],
+      "clique_component_sizes": [
+        1,
+        1,
+        1
+      ],
+      "charpoly_descending": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "energy": 0,
+      "profile_bound": 0,
+      "centralizer_bound": 0,
+      "complete_graph_energy": 4
+    },
+    {
+      "name": "UT2(F2)",
+      "order": 8,
+      "has_multiplicative_identity": true,
+      "center_order": 2,
+      "noncentral_vertices": 6,
+      "centralizer_orders": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "degrees": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "clique_component_sizes": [
+        2,
+        2,
+        2
+      ],
+      "charpoly_descending": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "energy": 0,
+      "profile_bound": 0,
+      "centralizer_bound": 12,
+      "complete_graph_energy": 40
+    },
+    {
+      "name": "M2(F2)",
+      "order": 16,
+      "has_multiplicative_identity": true,
+      "center_order": 2,
+      "noncentral_vertices": 14,
+      "centralizer_orders": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "degrees": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "clique_component_sizes": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "charpoly_descending": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "energy": 0,
+      "profile_bound": 0,
+      "centralizer_bound": 140,
+      "complete_graph_energy": 312
+    },
+    {
+      "name": "UT2(F3)",
+      "order": 27,
+      "has_multiplicative_identity": true,
+      "center_order": 3,
+      "noncentral_vertices": 24,
+      "centralizer_orders": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "degrees": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "clique_component_sizes": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "charpoly_descending": [
+        1,
+        0,
+        -960,
+        -10240,
+        299520,
+        7274496,
+        17121280,
+        -1344798720,
+        -21909012480,
+        -108380815360,
+        1243669856256,
+        29913105039360,
+        322649687326720,
+        2372239286599680,
+        13120147984220160,
+        56756171750506496,
+        195335177046589440,
+        537727156680130560,
+        1180404072621015040,
+        2043640272314695680,
+        2733634396279013376,
+        2728899899209809920,
+        1915789060236902400,
+        844424930131968000,
+        175921860444160000
+      ],
+      "energy": 160,
+      "profile_bound": 192,
+      "centralizer_bound": 456,
+      "complete_graph_energy": 1012
+    }
+  ],
+  "scope": "Finite identities and models supplement the complete written proofs in note.tex."
+}

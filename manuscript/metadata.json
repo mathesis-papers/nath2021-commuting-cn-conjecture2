@@ -1,0 +1,15 @@
+{
+  "id": "nath2021-commuting-cn-conjecture2",
+  "revision": 2,
+  "problem_ids": ["nath2021-commuting-cn-conjecture2"],
+  "topic": "Common-neighborhood energy of commuting graphs, surface graphs and disjoint unions of cliques",
+  "title": "Proofs of Nath–Fasfous–Das–Shang's commuting and surface conjectures, and a sharp form of Tak–Dutta–Nath's clique theorem",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "For Nath–Fasfous–Das–Shang's Conjectures 1–3 (Symmetry 13 (2021), 1651, Section 4, p. 11), we prove the surface and commuting-graph statements and give an alternative proof with exact equality cases for Tak–Dutta–Nath's prior clique result (arXiv:2605.22160v1 (2026), Theorem 5.4, pp. 14–15). Every planar or toroidal graph is non-CN-hyperenergetic. For every finite nonabelian group, its noncentral commuting graph satisfies E_CN ≤ n(n-z-2) < 2(n-1)(n-2), where n counts noncentral elements and z counts central elements; the same bound holds for every finite noncommutative ring, without an identity assumption. The group argument combines the published estimate E_CN ≤ 4m with a proper-centralizer count. A neighborhood-clique decomposition proves the surface statement. For a union of cliques, equality with the complete-graph benchmark occurs exactly for one clique or two isolated vertices.",
+  "summary": "Proofs of the surface and commuting-graph conjectures, a center-dependent bound for all finite noncommutative rings, centralizer-profile and least-prime-divisor refinements, and an alternative proof with all equality cases for the previously established clique-union conclusion.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/b3bd002bc644799939f299fe6c6c26195e3bb998/D5/S3/Combinatorics/Graph/CommonNeighborhood/NoncentralBound.lean"
+}
