@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24398995",
     "current_version": 2,
-    "doi": null,
+    "doi": "10.5281/zenodo.24398996",
     "lean_source": {
       "revision": "b3bd002bc644799939f299fe6c6c26195e3bb998",
       "url": "https://github.com/the-omega-institute/trureturing/blob/b3bd002bc644799939f299fe6c6c26195e3bb998/D5/S3/Combinatorics/Graph/CommonNeighborhood/NoncentralBound.lean"
