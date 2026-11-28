@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24398995",
     "current_version": 2,
     "doi": "10.5281/zenodo.24398996",
+    "kind": "note",
     "lean_source": {
       "revision": "b3bd002bc644799939f299fe6c6c26195e3bb998",
       "url": "https://github.com/the-omega-institute/trureturing/blob/b3bd002bc644799939f299fe6c6c26195e3bb998/D5/S3/Combinatorics/Graph/CommonNeighborhood/NoncentralBound.lean"
@@ -55,10 +56,12 @@
     "title": "Proofs of Nath–Fasfous–Das–Shang's commuting and surface conjectures, and a sharp form of Tak–Dutta–Nath's clique theorem",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-20T14:32:50.373382031Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "nath2021-commuting-cn-conjecture2"
